@@ -3,7 +3,7 @@ import React from 'react'
 function Navbar() {
   return (
     <div>
-      <nav className='flex justify-between px-4 py-3'>
+      <nav className='flex bg-white justify-between px-4 py-4'>
       <div className="left flex gap-1">
           <img src="" alt="logo-picture" />
           <h3>Aplicar</h3>
