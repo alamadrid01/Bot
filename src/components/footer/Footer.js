@@ -1,5 +1,5 @@
 import React from 'react'
-import male from '../secctionFour/assets/male.jpg'
+import male from '../sectionFour/assets/male.jpg'
 
 function Footer() {
   return (
