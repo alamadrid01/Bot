@@ -17,12 +17,12 @@ function App() {
     <div className="App">
       <Provider value= {{ file, setFile, fileName, setFileName }}>
       <Router>
-        <Navbar />
+        {/* <Navbar /> */}
         <Routes>
           <Route path='/' element={<Upload />} />
           <Route path='/upload-data' element={<UploadData />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
       </Provider>
     </div>

@@ -4,11 +4,11 @@ import male from '../secctionFour/assets/male.jpg'
 function Footer() {
   return (
     <div>
-        <main className="main bg-white flex py-4 pl-[6%]">
+        <main className="main  bg-white grid grid-cols-1 py-4 pl-[6%]">
             <div className="left">
                 <img src={male} className='rounded-full w-16 h-16' alt="logo" />
             </div>
-            <div className="right flex justify-between ml-9 w-[70%]">
+            <div className="right grid grid-cols-2 ml-9 w-[70%]">
                 <div className="first_column ">
                   <ul className='flex flex-col gap-5'>
                     <li className='text-gray-800'>Product</li>

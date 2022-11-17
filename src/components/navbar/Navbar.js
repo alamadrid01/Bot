@@ -5,11 +5,11 @@ function Navbar() {
   return (
     
       <nav className='flex bg-white justify-between px-4 py-4'>
-        <div className="hidden">
       <div className="left flex gap-1">
           <img className='rounded-full h-9 w-9 mr-5' src={male} alt="logo-picture" />
           <h3>Aplicar</h3>
         </div>
+        <div className="hidden md:flex md:flex-row md:justify-between">
         <div className="middle">
           <ul className='flex gap-8'>
             <li className='font-semibold'>Features</li>

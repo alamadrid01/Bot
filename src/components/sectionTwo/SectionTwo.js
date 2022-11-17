@@ -38,8 +38,8 @@ function SectionTwo() {
             file per upload session
           </p>
         </div>
-        <div className= {`right md:w-[40%] w-[100%] border-2 justify-center items-center md:ml-[10em] ${show ? 'border-[#e42424]' : 'border-[gray]'} border-dashed rounded-lg`}>
-          <div className="uploadContainer relative flex flex-col md:px-[20vh] py-[10vh]   ">
+        <div className= {`right md:w-[40%] w-[100%] border-2 border-spacing-10 justify-center items-center md:ml-[10em] ${show ? 'border-[#e42424]' : 'border-[gray]'} border-dashed rounded-lg `}>
+          <div className="uploadContainer relative flex flex-col md:px-[20vh]  md:py-[10vh] py-[15vh]   ">
             {
               fileName && <h2 className="text-[22px] font-semibold text-blue-900 mb-4">You selected {fileName}</h2>
             }
@@ -65,8 +65,8 @@ function SectionTwo() {
         </div>
       </main>
       <h2 className="text-black text-left md:text-center my-8  font-bold text-2xl">Follow These Steps to Seamlessly Create Your Cover Letters</h2>
-      <div className="additional_info_container grid grid-cols-1 md:grid-cols-4 gap-5 justify-around text-left  ">
-        <div className="additional_info px-4 py-3  box-border bg-red-200 border-2  border-solid flex flex-col items-center gap-6 w-22 h-21 rounded-lg justify-center">
+      <div className="additional_info_container grid grid-cols-1 md:grid-cols-4 gap-5 justify-around text-left px-[15%] ">
+        <div className="additional_info px-4 py-3  box-border bg-red-200 border-2  border-solid flex flex-col items-center gap-6 w-22 h-21 rounded-lg justify-start ">
           <img className="w-8 h-8 relative right-6  " src={image} alt="" />
           <span className="text-sm w-[65%] text-gray-900">Upload Your CV or Resume</span>
         </div>

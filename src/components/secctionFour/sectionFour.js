@@ -9,10 +9,10 @@ function SectionFour() {
     }
   return (
     <div>
-        <main className='px-20'>
+        <main className='md:px-20  px-5'>
             <h2 className='text-2xl font-bold py-10'>What Others Are Saying...</h2>
 
-            <div className="container  grid grid-cols-4 gap-9 ">
+            <div className="container  grid grid-cols-1  md:grid-cols-4 gap-9 pl-6 ">
                 <div className="review w-[90%] text-left flex flex-col p-5 py-8  rounded-lg border-2 border-gray-400 ">
                     <p>I am impressed by the strength of the AI on this page and i think its's the best choice on the market</p>
                     <img  className='w-12 my-16 mb-2 h-12 rounded-full' src={male} alt="male-picture" />
