@@ -5,64 +5,80 @@ import image from './assets/upload_image.svg'
 
 function SectionTwo() {
   const Navigate = useNavigate();
+  const [fileSize, setFileSize] = useState('')
+  const [show, setShow] = useState(false)
+
+  // const [fileLength, setFileLength] = useState('')
   const { file, setFile, fileName, setFileName } = useContext(UserContext);
 
-  const submit = (e) => {
-    e.preventDefault();
-    console.log(file);
-    console.log(fileName);
-    Navigate("/test");
-  };
+ 
   const changeHandler = (e) => {
     setFile(e.target.files);
     setFileName(e.target.files[0].name);
+    setFileSize(e.target.files[0].size)
   };
+  
+  const fileValidation =() =>{
+
+    return <h2 className="text-rose-600 font-semibold text-[13px]">The file too large. Please Upload a file with maximum of 5mb</h2>
+
+  }
+
+
 
   return (
     <div className="px-4  py-10">
       <main className="flex flex-col md:flex-row ">
-        <div className="left text-left px-[18vh]  w-[40%]  flex flex-col justify-center items-center ">
+        <div className="left text-left md:px-[18vh]  md:w-[40%] w-[100%] mb-[20px] md:mb-09  flex flex-col justify-center items-center ">
           <h2 className="text-2xl font-bold mb-[11px]   ">
             Upload your CV/Resume to make a Cover Letter
           </h2>
-          <p className="text-gray text-[13px] text-[#666060] ">
+          <p className="text-gray md:text-[13px] text-[20px] text-[#666060] ">
             Maximum file size is 10MB, and you can only upload a maximum of 1
             file per upload session
           </p>
         </div>
-        <div className="right w-[40%] border-2 justify-center items-center ml-[10em] border-[gray]  border-dashed rounded-lg ">
-          <div className="uploadContainer flex flex-col px-[20vh] py-[10vh]   ">
+        <div className= {`right md:w-[40%] w-[100%] border-2 justify-center items-center md:ml-[10em] ${show ? 'border-[#e42424]' : 'border-[gray]'} border-dashed rounded-lg`}>
+          <div className="uploadContainer relative flex flex-col md:px-[20vh] py-[10vh]   ">
+            {
+              fileName && <h2 className="text-[22px] font-semibold text-blue-900 mb-4">You selected {fileName}</h2>
+            }
             <input
+              style= {{ opacity: '0' }}
               type="file"
               accept="application/pdf"
               onChange={changeHandler}
-              className="upload_file"
-              id=""
+              className="upload_file absolute  left-[40%] bottom-[59px]"
+              id="upload_button"
             />
             <label for="upload_file" className="">
               <img src="" alt="" />
-              <h3 className=" text-blue-700 font-semibold">Drag & Drop to Upload </h3>
+              <h3 className=" text-blue-700 md:text-[18px] text-[20px] font-semibold">Drag & Drop to Upload </h3>
               <p className="text-gray-500">File Supported PDF</p>
+              {
+                fileSize > 10 ? fileValidation()  : null
+              }
               <button className="text-blue-700 font-bold ">Or browse</button>
             </label>
+
           </div>
         </div>
       </main>
-      <h2 className="text-black my-8  font-bold text-2xl">Follow These Steps to Seamlessly Create Your Cover Letters</h2>
-      <div className="additional_info_container flex gap-5 justify-around text-left  ">
-        <div className="additional_info px-4 py-3  box-border bg-blue-400 border-2  border-solid flex flex-col items-center gap-6 w-22 h-21 rounded-lg justify-center">
+      <h2 className="text-black text-left md:text-center my-8  font-bold text-2xl">Follow These Steps to Seamlessly Create Your Cover Letters</h2>
+      <div className="additional_info_container grid grid-cols-1 md:grid-cols-4 gap-5 justify-around text-left  ">
+        <div className="additional_info px-4 py-3  box-border bg-red-200 border-2  border-solid flex flex-col items-center gap-6 w-22 h-21 rounded-lg justify-center">
           <img className="w-8 h-8 relative right-6  " src={image} alt="" />
           <span className="text-sm w-[65%] text-gray-900">Upload Your CV or Resume</span>
         </div>
-        <div className="additional_info px-4 py-3  box-border bg-blue-400 border-2  border-solid flex flex-col items-center gap-6 w-22 h-21 rounded-lg justify-center">
+        <div className="additional_info px-4 py-3  box-border bg-indigo-300 border-2  border-solid flex flex-col items-center gap-6 w-22 h-21 rounded-lg justify-center">
           <img className="w-8 h-8 relative right-6  " src={image} alt="" />
           <span className="text-sm w-[65%] text-gray-900">Input Additional Information</span>
         </div>
-        <div className="additional_info px-4 py-3  box-border bg-blue-400 border-2  border-solid flex flex-col items-center gap-6 w-22 h-21 rounded-lg justify-center">
+        <div className="additional_info px-4 py-3  box-border bg-yellow-300 border-2  border-solid flex flex-col items-center gap-6 w-22 h-21 rounded-lg justify-center">
           <img className="w-8 h-8 relative right-6  " src={image} alt="" />
           <span className="text-sm w-[65%] text-gray-900">Generate Your Cover Letter</span>
         </div>
-        <div className="additional_info px-4 py-3  box-border bg-blue-400 border-2  border-solid flex flex-col items-center gap-6 w-22 h-21 rounded-lg justify-center">
+        <div className="additional_info px-4 py-3  box-border bg-lime-300 border-2  border-solid flex flex-col items-center gap-6 w-22 h-21 rounded-lg justify-center">
           <img className="w-8 h-8 relative right-6  " src={image} alt="" />
           <span className="text-sm w-[65%] text-gray-900">Download or Save</span>
         </div>

@@ -1,11 +1,13 @@
 import React from 'react'
+import male from '../secctionFour/assets/male.jpg'
 
 function Navbar() {
   return (
-    <div>
+    
       <nav className='flex bg-white justify-between px-4 py-4'>
+        <div className="hidden">
       <div className="left flex gap-1">
-          <img src="" alt="logo-picture" />
+          <img className='rounded-full h-9 w-9 mr-5' src={male} alt="logo-picture" />
           <h3>Aplicar</h3>
         </div>
         <div className="middle">
@@ -25,8 +27,8 @@ function Navbar() {
             Register
           </button>
         </div>
+        </div>
       </nav>
-    </div>
   )
 }
 

@@ -7,10 +7,8 @@ import Navbar from '../../components/navbar/Navbar'
 function UploadData() {
   return (
     <div>
-        <main className='bg-gray-100'>
-            <Navbar />
+        <main className='bg-gray-100 '>
             <InputData />
-            <Footer />
         </main>
     </div>
   )

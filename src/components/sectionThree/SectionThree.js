@@ -6,9 +6,9 @@ function SectionThree() {
     const {file, setFile, fileName, setFileName} = useContext(UserContext)
   return (
         <div className="div px-20  my-10">
-           <main  className='px-5 rounded-lg py-5 relative bg-[aqua] '>
+           <main  className='px-5 rounded-lg py-5 relative bg-indigo-200 '>
             {/* <div className=' absolute h-[100vh] w-[80vh] bg-red-900 ' /> */}
-            <h2 className='text-2xl font-bold mt-2'>Benefits of Using Our COver Letter Builder</h2>
+            <h2 className='text-2xl font-bold mt-3'>Benefits of Using Our COver Letter Builder</h2>
             <div className="top grid px-[10rem] py-[3rem] grid-cols-2 gap-12 ">
                 <div className="w-[50vh] py-10 bg-white text-left px-5 box-border flex flex-col rounded-md">
                     <img src={image} className='w-8 h-8' alt="" />

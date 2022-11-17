@@ -10,12 +10,12 @@ function Upload() {
   return (
     <div>
         <div className="upload bg-gray-100">
-            <Navbar />
+            
             <SectionOne />
             <SectionTwo />
             <SectionThree />
             <SectionFour />
-            <Footer />
+
         </div>
     </div>
   )
