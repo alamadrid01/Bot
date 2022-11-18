@@ -10,7 +10,7 @@ function Upload() {
   return (
     <div>
         <div className="upload bg-gray-100 font-manrope">
-            
+            {/* <Navbar /> */}
             <SectionOne />
             <SectionTwo />
             <SectionThree />

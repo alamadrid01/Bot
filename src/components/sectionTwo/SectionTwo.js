@@ -30,23 +30,23 @@ function SectionTwo() {
 
 
   return (
-    <div className="px-4 z-20 relative bg-gray-100  py-10">
-      <main className="flex flex-col md:flex-row ">
-        <div className="left text-left  md:px-[18vh]  md:w-[40%] w-[100%] mb-[20px] md:mb-09  flex flex-col justify-center items-center ">
-          <h2 className="text-2xl font-bold mb-[11px]   ">
+    <div className="px-1 z-20 relative bg-gray-100  py-[50px]">
+      <main className="flex flex-col md:flex-row mt-[60px] ">
+        <div className="left text-left  md:px-[14vh] md:w-[49%] w-[100%] mb-[20px] md:mb-09  flex flex-col justify-center items-center ">
+          <h2 className="text-4xl font-bold mb-[11px]   ">
             Upload your CV/Resume to make a Cover Letter
           </h2>
-          <p className="text-gray md:text-[13px] text-[20px] text-[#666060] ">
-            Maximum file size is 10MB, and you can only upload a maximum of 1
+          <p className="text-gray md:text-[22px] mt-2 text-[20px] text-[#666060] ">
+            Maximum file size is 5MB, and you can only upload a maximum of 1
             file per upload session
           </p>
         </div>
-        <div className= {`right md:w-[40%] w-[100%] border-2 border-spacing-10 justify-center items-center md:ml-[10em] ${show ? 'border-[#e42424]' : 'border-[gray]'} border-dashed rounded-lg `}>
+        <div className= {`right md:w-[40%] w-[100%] border-2 border-spacing-10 justify-center items-center md:ml-[3.5em] ${show ? 'border-[#e42424]' : 'border-[gray]'} border-dashed rounded-lg `}>
           <div className="uploadContainer relative flex flex-col md:px-[20vh] md:py-[10vh] py-[15vh]">
             {
               fileName && <h2 className="text-[22px] font-semibold text-blue-900 mb-4">You selected {fileName}</h2>
             }
-            <img src={first} className='w-10 h-10' alt="" />
+            <img src={first} className='w-[67px] relative left-[35%]  h-[67px]' alt="" />
             <input
               style= {{ opacity: '0' }}
               type="file"
@@ -67,24 +67,24 @@ function SectionTwo() {
 
           </div>
         </div>
-      </main>
-      <h2 className="text-black text-left md:text-center my-8  font-bold text-2xl">Follow These Steps to Seamlessly Create Your Cover Letters</h2>
-      <div className="additional_info_container grid grid-cols-2 md:grid-cols-4 gap-5 justify-around text-left px-[10%] md:px-[15%] ">
-        <div className="additional_info px-4 py-3  box-border bg-red-200 border-2  border-solid flex flex-col items-center gap-6 w-22 h-[150px] md:h1-21 rounded-lg justify-start ">
-          <img className="w-10 h-10 relative right-6  " src={first} alt="" />
-          <span className="text-sm w-[65%] text-gray-900">Upload Your CV or Resume</span>
+      </main >
+      <h2 className="text-black my-[96px] relative left-[25%] font-bold text-2xl md:text-4xl md:w-[50%] ">Follow These Steps to Seamlessly Create Your Cover Letters</h2>
+      <div className="additional_info_container grid grid-cols-2 md:grid-cols-4 gap-[60px] justify-between text-left px-[6.8%]  ">
+        <div className="additional_info  box-border bg-red-200 border-2  border-solid flex flex-col items-center w-[272px] h-[260px] rounded-lg justify-center ">
+          <img className="w-[80px] h-[80px] relative right-[26%] mb-5 " src={first} alt="" />
+          <span className="text-sm md:text-[24px] w-[70%] relative left-[-10px] leading-9 text-gray-900">Upload Your CV or Resume</span>
         </div>
-        <div className="additional_info px-4 py-3  box-border bg-indigo-300 border-2  border-solid flex flex-col items-center gap-6 w-22 h-21 rounded-lg justify-center">
-          <img className="w-10 h-10 relative right-6  " src={second} alt="" />
-          <span className="text-sm w-[65%] text-gray-900">Input Additional Information</span>
+        <div className="additional_info px-4 py-3  box-border bg-indigo-300 border-2  border-solid flex flex-col items-center w-[272px] h-[260px]  rounded-lg justify-center">
+          <img className="w-[80px] h-[80px] relative right-[26%] mb-5  " src={second} alt="" />
+          <span className="text-sm  md:text-[24px] w-[85%] leading-9 text-gray-900">Input Additional Information</span>
         </div>
-        <div className="additional_info px-4 py-3  box-border bg-yellow-200 border-2  border-solid flex flex-col items-center gap-6 w-22 h-[150px] md:h1-21 rounded-lg justify-center">
-          <img className="w-10 h-10 relative right-6  " src={third} alt="" />
-          <span className="text-sm w-[65%] text-gray-900">Generate Your Cover Letter</span>
+        <div className="additional_info px-4 py-3  box-border bg-yellow-200 border-2  border-solid flex flex-col items-center w-[272px] h-[260px] rounded-lg justify-center">
+          <img className="w-[80px] h-[80px] relative right-[26%] mb-5  " src={third} alt="" />
+          <span className="text-sm  md:text-[24px] w-[85%] leading-9 text-gray-900">Generate Your Cover Letter</span>
         </div>
         <div className="additional_info px-4 py-3  box-border bg-emerald-200 border-2  border-solid flex flex-col items-center gap-6 w-22 h-21 rounded-lg justify-center">
-          <img className="w-10 h-10 relative right-6 top-[-10px]  " src={fourth} alt="" />
-          <span className="text-sm w-[65%] text-gray-900">Download or Save</span>
+          <img className="w-[80px] h-[80px] relative right-[26%] top-[2px]  " src={fourth} alt="" />
+          <span className="text-sm  md:text-[24px] w-[65%] leading-9 relative left-[-20px] text-gray-900">Download or Save</span>
         </div>
         
       </div>
