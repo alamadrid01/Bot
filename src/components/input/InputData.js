@@ -63,11 +63,11 @@ function InputData() {
   return (
     <div className='bg-red md:px-[204px] md:py-[120px] font-manrope'>
         <main className=' md:px-[80px] px-[30px] rounded-lg h-sreen pt-12 bg-white ' >
-            <button onClick={clickHandler} className='flex  mt-[55px] gap-3 font-semibold'>
+            <button onClick={clickHandler} className='flex items-center  mt-[55px] gap-3 font-semibold'>
                 <img src={back} className='h-[30] md:h-[36px] w-[30px] md:w-[36px]' alt="" />
                 <span className='text-[20] md:text-[24px]'>Back</span>
             </button>
-            <h1 className="title mt-[80px] text-left font-semibold text-[36px] md:text-[40px]">Tell Us A Little About the Job</h1>
+            <h1 className="title mt-[80px] text-left font-semibold text-[24px] md:text-[40px]">Tell Us A Little About the Job</h1>
             <p className="subtitle text-left text-gray-800 mt-2 text-[16px] md:text-[20px]">This information would help us to customize your cover letter and tailor it to your specific application</p>
             <form action="post" onSubmit={submit} className="form font-manrope grid w-[100%]  md:grid-cols-2 md:gap-20 gap-12 my-[80px] grid-cols-1 ">
                 <div className="left">
