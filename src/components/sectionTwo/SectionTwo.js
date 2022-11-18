@@ -30,15 +30,15 @@ function SectionTwo() {
 
 
   return (
-    <div className="px-1 z-20 relative bg-gray-100  py-[50px]">
-      <main className="flex flex-col md:flex-row mt-[60px] ">
+    <div className="px-1 z-20  relative flex flex-col items-center md:flex-rol bg-gray-100  py-[50px]">
+      <main className="flex flex-col items-center  w-[90%] md:w-[]  md:flex-row mt-[60px] ">
         <div className="left text-left  md:px-[14vh] md:w-[49%] w-[100%] mb-[20px] md:mb-09  flex flex-col justify-center items-center ">
           <h2 className="text-4xl font-bold mb-[11px]   ">
             Upload your CV/Resume to make a Cover Letter
           </h2>
           <p className="text-gray md:text-[22px] mt-2 text-[20px] text-[#666060] ">
             Maximum file size is 5MB, and you can only upload a maximum of 1
-            file per upload session
+            file per upload session 
           </p>
         </div>
         <div className= {`right md:w-[40%] w-[100%] border-2 border-spacing-10 justify-center items-center md:ml-[3.5em] ${show ? 'border-[#e42424]' : 'border-[gray]'} border-dashed rounded-lg `}>
@@ -68,26 +68,7 @@ function SectionTwo() {
           </div>
         </div>
       </main >
-      <h2 className="text-black my-[96px] relative left-[25%] font-bold text-2xl md:text-4xl md:w-[50%] ">Follow These Steps to Seamlessly Create Your Cover Letters</h2>
-      <div className="additional_info_container grid grid-cols-2 md:grid-cols-4 gap-[60px] justify-between text-left px-[6.8%]  ">
-        <div className="additional_info  box-border bg-red-200 border-2  border-solid flex flex-col items-center w-[272px] h-[260px] rounded-lg justify-center ">
-          <img className="w-[80px] h-[80px] relative right-[26%] mb-5 " src={first} alt="" />
-          <span className="text-sm md:text-[24px] w-[70%] relative left-[-10px] leading-9 text-gray-900">Upload Your CV or Resume</span>
-        </div>
-        <div className="additional_info px-4 py-3  box-border bg-indigo-300 border-2  border-solid flex flex-col items-center w-[272px] h-[260px]  rounded-lg justify-center">
-          <img className="w-[80px] h-[80px] relative right-[26%] mb-5  " src={second} alt="" />
-          <span className="text-sm  md:text-[24px] w-[85%] leading-9 text-gray-900">Input Additional Information</span>
-        </div>
-        <div className="additional_info px-4 py-3  box-border bg-yellow-200 border-2  border-solid flex flex-col items-center w-[272px] h-[260px] rounded-lg justify-center">
-          <img className="w-[80px] h-[80px] relative right-[26%] mb-5  " src={third} alt="" />
-          <span className="text-sm  md:text-[24px] w-[85%] leading-9 text-gray-900">Generate Your Cover Letter</span>
-        </div>
-        <div className="additional_info px-4 py-3  box-border bg-emerald-200 border-2  border-solid flex flex-col items-center gap-6 w-22 h-21 rounded-lg justify-center">
-          <img className="w-[80px] h-[80px] relative right-[26%] top-[2px]  " src={fourth} alt="" />
-          <span className="text-sm  md:text-[24px] w-[65%] leading-9 relative left-[-20px] text-gray-900">Download or Save</span>
-        </div>
-        
-      </div>
+  
     </div>
   );
 }
