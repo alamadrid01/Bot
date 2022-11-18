@@ -31,9 +31,9 @@ function SectionTwo() {
 
   return (
     <div className="px-1 z-20  relative flex flex-col items-center md:flex-rol bg-gray-100  py-[50px]">
-      <main className="flex flex-col items-center  md:w-[98%] w-[90%]  md:flex-row mt-[60px] ">
+      <main className="flex flex-col items-center  md:w-[98%] w-[90%]  md:flex-row md:mt-[60px]  ">
         <div className="left text-left text-gray-800  md:px-[14vh] md:w-[49%] w-[100%] mb-[20px] md:mb-09  flex flex-col justify-center items-center ">
-          <h2 className="text-4xl font-bold leading-[3rem] mb-[11px]   ">
+          <h2 className="md:text-4xl text-[24px] font-bold leading-[3rem] mb-[11px]   ">
             Upload your CV/Resume to make a Cover Letter
           </h2>
           <p className="text-gray md:text-[22px] mt-2 text-[20px] text-[#666060] ">
