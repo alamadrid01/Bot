@@ -1,5 +1,5 @@
 import React,{useContext} from 'react'
-import pic from './assets/frame.svg';
+import pic from './assets/pic.svg';
 
 
 
@@ -7,13 +7,13 @@ function SectionOne() {
 
   return (
     <div>
-         <main className="flex h-[368px] md:h-[100vh] bg-blue-900 md:px-3 md:py-5 relative ">
-        <div className="text flex flex-col  md:px-[96px] px-[2rem] h-[50vh] md:h-[auto] w-[80%] justify-center items-center flex-auto">
-          <h1 className='font-bold w-[100%] md-w-[] text-[32px] md:text-4xl leading-[] md:leading-[4rem] text-left pr-[10px] md:pr-[0] md:text-[56px]  text-white'>Create a Job-Landing Cover Letter in seconds</h1>
-          <p className='text-white text-left  md:left-[-80px] text-[20px] mt-3 md:text-[40px] '>100% Automated and Free</p>
+         <main className="flex h-[368px] md:h-[100vh] bg-blue-900 md:px-3 md:py-5 relative box-border overflow-hidden ">
+        <div className="text relative bottom-[20%] flex flex-col md:px-[96px] px-[2rem] h-[50vh] md:h-[auto] w-[80%] justify-center items-center auto">
+          <h1 className='font-bold w-[100%] md-w-[] text-[32px] md:text-4xl  md:leading-[4rem] text-left md:pr-[200px]  md:text-[56px]  text-white'>Create a Job-Landing Cover Letter in seconds</h1>
+          <p className='text-slate-200 text-left w-[100%] text-[20px] mt-3 md:text-[40px] '>100% Automated and Free</p>
         </div>
         <div className="shape hidden md:flex flex-auto">
-            <img className='w-[600px] bottom-[-205px] relative h-[200px]' src={pic} alt="" />
+            <img className=' w-[1440px] h-[440px] left-[200px] bottom-[-100px] absolute'src={pic} alt="" />
         </div>
       </main>
 
