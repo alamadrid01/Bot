@@ -13,7 +13,7 @@ function InputData() {
     const [name, setName] = useState('')
     const [department, setDepartment] = useState('')
     const [error, setError] = useState(false)
-    const [show, setShow] = useState(true)
+    // const [show, setShow] = useState(true)
 
 
 
@@ -54,8 +54,11 @@ function InputData() {
 
     const submit = (e) =>{
         e.preventDefault()
+
+            if(companyName.length==0||companyAddress.length==0){
+                setError(true)
+            }
         
-        alert('test running')
         
     }
 
@@ -74,24 +77,39 @@ function InputData() {
                     <div className="a flex font-manrope flex-col text-left mb-[2rem] ">
                         <label className='my-[4px] text-[18px]'>Company's Name</label>
                         <input  className='px-3 py-[9px] border-[1.5px] border-gray-300 rounded-md' onChange={companyHandler} autoFocus type="text" value={companyName} id="companyName" />
+                        {
+                            error&&companyName<=0 ? <p className='text-rose-500 mt-2 ml-2 text-[14px]'>This is an error alert. check it out !</p>  : ''
+                        }
                     </div>
                     <div className="a flex flex-col text-left mb-[2rem] ">
                         <label className='my-[3px] text-[18px]'>Company's Address</label>
                         <input className='px-3 py-[9px] border-[1.5px] border-gray-300 rounded-md' onChange={companyAddressHandler} type="text" value={companyAddress} id="companyName" />
+                        {
+                            error&&companyAddress<=0 ? <p className='text-rose-500 mt-2 ml-2 text-[14px]'>This is an error alert. check it out !</p>  : ''
+                        }
                     </div>
                     <div className="a grid grid-cols-2 gap-2 mb-[2rem]   ">
                         <div className="b flex flex-col text-left ">
                             <label className='my-[4px] text-[18px]'>City</label>
                             <input className='px-3 py-[9px] border-[1.5px] border-gray-300 rounded-md' onChange={cityHandler} type="text" value={city} id="companyName" />
+                            {
+                            error&&city<=0 ? <p className='text-rose-500 mt-2 ml-2 text-[14px]'>This is an error alert. check it out !</p>  : ''
+                        }
                         </div>
                         <div className="b  flex flex-col text-left">
                             <label className='my-[3px] text-[18px]'>Country</label>
                             <input className='px-3 py-[9px] border-[1.5px] border-gray-300 rounded-md' onChange={countryHandler} type="text" value={country} id="companyName" />
+                            {
+                            error&&country<=0 ? <p className='text-rose-500 mt-2 ml-2 text-[14px]'>This is an error alert. check it out !</p>  : ''
+                        }
                         </div>
                     </div>
                     <div className="a flex flex-col text-left mb-2rem">
                         <label className='my-[4px] text-[18px]'>Date of Application</label>
                         <input className='px-3 py-[9px]  border-[1.5px] border-gray-300 rounded-md' onChange={dateHandler} type="text" value={date} id="companyName" />
+                        {
+                            error&&date<=0 ? <p className='text-rose-500 mt-2 ml-2 text-[14px]'>This is an error alert. check it out !</p>  : ''
+                        }
                     </div>
                 </div>
 
@@ -99,14 +117,23 @@ function InputData() {
                     <div className="a flex flex-col text-left mb-[2rem] ">
                         <label className='my-[4px] text-[18px]'>What Role Are You Applying For?</label>
                         <input className='px-3 py-[9px] border-[1.5px] border-gray-300 rounded-md' type="text" onChange={roleHandler} value={role} id="companyName" />
+                        {
+                            error&&role<=0 ? <p className='text-rose-500 mt-2 ml-2 text-[14px]'>This is an error alert. check it out !</p>  : ''
+                        }
                     </div>
                     <div className="a flex flex-col text-left mb-[2rem] ">
                         <label className='my-[4px] text-[18px]'>Years of Experience</label>
                         <input className='px-3 py-[9px] border-[1.5px] border-gray-300 rounded-md' type="text" onChange={yearsHandler} value={years} id="companyName" />
+                        {
+                            error&&years<=0 ? <p className='text-rose-500 mt-2 ml-2 text-[14px]'>This is an error alert. check it out !</p>  : ''
+                        }
                     </div>
                     <div className="a flex flex-col text-left mb-[2rem] ">
                             <label className='my-[4px] text-[18px]'>Recipient's Name</label>
                             <input className='px-3 py-[9px] border-[1.5px] border-gray-300 rounded-md' type="text" onChange={nameHandler} value={name} id="companyName" />
+                            {
+                            error&&name<=0 ? <p className='text-rose-500 mt-2 ml-2 text-[14px]'>This is an error alert. check it out !</p>  : ''
+                        }
                     </div>
                     <div className="a flex flex-col text-left">
                         <label className='my-[4px] text-[18px]'>Recipient's Department(Optional)</label>
@@ -115,7 +142,7 @@ function InputData() {
                     
                 </div>
 
-                <button type='submit' disabled={show} className='px-5 w-[100%] py-4 mt-[12px] mb-[100px] text-[18px] text-white bg-blue-700  font-semibold rounded-md'>Continue</button>
+                <button type='submit' className='px-5 w-[100%] py-4 mt-[12px] mb-[100px] text-[18px] text-white bg-blue-700  font-semibold rounded-md'>Continue</button>
             </form>
         </main>
     </div>
