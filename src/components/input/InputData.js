@@ -61,8 +61,8 @@ function InputData() {
 
    
   return (
-    <div className='bg-red px-10 md:px-[204px] md:py-[120px] font-manrope py-10'>
-        <main className=' md:px-[80px] px-[80px] rounded-lg h-sreen pt-12 bg-white ' >
+    <div className='bg-red md:px-[204px] md:py-[120px] font-manrope'>
+        <main className=' md:px-[80px] px-[30px] rounded-lg h-sreen pt-12 bg-white ' >
             <button onClick={clickHandler} className='flex  mt-[55px] gap-3 font-semibold'>
                 <img src={back} className='h-[36px] w-[36px]' alt="" />
                 <span className='text-[24px]'>Back</span>
@@ -89,14 +89,13 @@ function InputData() {
                             <input className='px-3 py-[9px] border-[1.5px] border-gray-300 rounded-md' onChange={countryHandler} type="text" value={country} id="companyName" />
                         </div>
                     </div>
-                    <div className="a flex flex-col text-left">
+                    <div className="a flex flex-col text-left mb-2rem">
                         <label className='my-[4px] text-[18px]'>Date of Application</label>
-                        <input className='px-3 py-[9px] border-[1.5px] border-gray-300 rounded-md' onChange={dateHandler} type="text" value={date} id="companyName" />
+                        <input className='px-3 py-[9px]  border-[1.5px] border-gray-300 rounded-md' onChange={dateHandler} type="text" value={date} id="companyName" />
                     </div>
-                    <button type='submit' disabled={show} className='px-5 w-[100%] py-4 mt-[3rem] mb-[100px] text-[18px] text-white bg-blue-700  font-semibold rounded-md'>Continue</button>
                 </div>
 
-                <div className="right mt-[-2rem] md:mt-0 ">
+                <div className="right mt-[-1rem] md:mt-0 ">
                     <div className="a flex flex-col text-left mb-[2rem] ">
                         <label className='my-[4px] text-[18px]'>What Role Are You Applying For?</label>
                         <input className='px-3 py-[9px] border-[1.5px] border-gray-300 rounded-md' type="text" onChange={roleHandler} value={role} id="companyName" />
@@ -116,6 +115,7 @@ function InputData() {
                     
                 </div>
 
+                <button type='submit' disabled={show} className='px-5 w-[100%] py-4 mt-[12px] mb-[100px] text-[18px] text-white bg-blue-700  font-semibold rounded-md'>Continue</button>
             </form>
         </main>
     </div>

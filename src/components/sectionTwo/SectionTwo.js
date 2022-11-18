@@ -46,6 +46,7 @@ function SectionTwo() {
             {
               fileName && <h2 className="text-[22px] font-semibold text-blue-900 mb-4">You selected {fileName}</h2>
             }
+            <img src={first} className='w-10 h-10' alt="" />
             <input
               style= {{ opacity: '0' }}
               type="file"

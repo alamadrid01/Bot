@@ -9,7 +9,7 @@ import SectionTwo from '../../components/sectionTwo/SectionTwo'
 function Upload() {
   return (
     <div>
-        <div className="upload bg-gray-100">
+        <div className="upload bg-gray-100 font-manrope">
             
             <SectionOne />
             <SectionTwo />
