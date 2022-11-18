@@ -61,9 +61,8 @@ function InputData() {
             if(companyName.length==0||companyAddress.length==0||city.length||country.length||date.length||role.length||years.length||name.length){
                 setError(true)
             }else{
-                // setError(!error)
+                alert('Dude calm down, i have not linked the API') 
             }
-        
         
     }
 

@@ -7,7 +7,7 @@ import  fourth from '../sectionTwo/assets/fourth.svg'
 function Drop() {
   return (
     <div className='mb-[40px] md:mb-[96px]'>
-            <h2 className="text-gray-800 my-[96px] relative left-[10%] md:left-[25%] font-bold text-2xl md:text-4xl w-[80%] md:w-[50%] ">Follow These Steps to Seamlessly Create Your Cover Letters</h2>
+            <h2 className="text-gray-800 my-[45px] mt-[-2px]  md:my-[96px]  relative left-[10%] md:left-[25%] font-bold text-2xl md:text-4xl w-[80%] md:w-[50%] ">Follow These Steps to Seamlessly Create Your Cover Letters</h2>
       <div className="additional_info_container grid grid-cols-2 gap-[20px] md:grid-cols-4 md:gap-[60px] text-left px-[6.8%]  ">
         <div className="additional_info  box-border bg-red-100 border-2  border-solid flex flex-col items-center  md:w-[272px] md:h-[260px] rounded-lg justify-center ">
           <img className="w-[60px] md:w-[80px] h-[60px] md:h-[80px] relative right-[20px] md:right-[26%] mb-5 " src={first} alt="" />
