@@ -22,7 +22,7 @@ function Drop() {
           <span className="text-sm  md:text-[24px] w-[85%] leading-9 text-gray-900">Generate Your Cover Letter</span>
         </div>
         <div className="additional_info px-4 py-3  box-border bg-emerald-100 border-2  border-solid flex flex-col items-center gap-6 md:w-22 md:h-21 rounded-lg justify-center">
-          <img className="w-[60px] md:w-[80px] h-[80px] md:h-[60px] relative right-[26%] top-[2px]  " src={fourth} alt="" />
+          <img className="w-[60px] md:w-[80px] h-[80px] md:h-[60px] relative right-[12%] md:right-[26%] top-[2px]  " src={fourth} alt="" />
           <span className="text-sm  md:text-[24px] w-[65%] leading-9 relative left-[-20px] text-gray-900">Download or Save</span>
         </div>
         

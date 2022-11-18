@@ -45,7 +45,7 @@ function SectionTwo() {
             {fileSize > 0 ? null : (
               <img
                 src={first}
-                className="w-[67px] relative left-[37%]  h-[67px]"
+                className="w-[67px] relative left-[30%] md:left-[37%]  h-[67px]"
                 alt=""
               />
             )}
