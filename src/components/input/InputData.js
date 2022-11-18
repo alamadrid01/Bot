@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
+import back from './asesets/arrow.png';
 function InputData() {
 
     const [companyName, setCompanyName] = useState('')
@@ -60,57 +61,59 @@ function InputData() {
 
    
   return (
-    <div >
-        <main className=' md:px-[15%] px-[5%] h-sreen pt-12 ' >
-            <button onClick={clickHandler} className='relative right-[48%] font-semibold'>
-                Back
+    <div className='bg-red px-10 md:px-[204px] md:py-[120px] py-10'>
+        <main className=' md:px-[80px] px-[80px] rounded-lg h-sreen pt-12 bg-white ' >
+            <button onClick={clickHandler} className='flex  mt-[55px] gap-3 font-semibold'>
+                <img src={back} className='h-[36px] w-[36px]' alt="" />
+                <span className='text-[24px]'>Back</span>
             </button>
-            <h1 className="title mt-7 text-left font-semibold text-2xl">Tell Us A Little About the Job</h1>
-            <p className="subtitle text-left text-gray-800 mt-2">This information would help us to customize your cover letter and tailor it to your specific application</p>
-            <form action="post" onSubmit={submit} className="form grid w-[100%]  md:grid-cols-2 md:gap-20 gap-12 my-[40px] grid-cols-1 ">
+            <h1 className="title mt-[80px] text-left font-semibold text-[40px]">Tell Us A Little About the Job</h1>
+            <p className="subtitle text-left text-gray-800 mt-2 text-[20px]">This information would help us to customize your cover letter and tailor it to your specific application</p>
+            <form action="post" onSubmit={submit} className="form grid w-[100%]  md:grid-cols-2 md:gap-20 gap-12 my-[80px] grid-cols-1 ">
                 <div className="left">
-                    <div className="a flex flex-col text-left mb-2 ">
-                        <label className='my-[3px]'>Company's Name</label>
-                        <input  className='px-3 py-[3px] border-[1.5px] border-gray-300 rounded-md' onChange={companyHandler} autoFocus type="text" value={companyName} id="companyName" />
+                    <div className="a flex font-manrope flex-col text-left mb-[2rem] ">
+                        <label className='my-[4px] text-[18px]'>Company's Name</label>
+                        <input  className='px-3 py-[9px] border-[1.5px] border-gray-300 rounded-md' onChange={companyHandler} autoFocus type="text" value={companyName} id="companyName" />
                     </div>
-                    <div className="a flex flex-col text-left mb-2 ">
-                        <label className='my-[3px]'>Company's Address</label>
-                        <input className='px-3 py-[3px] border-[1.5px] border-gray-300 rounded-md' onChange={companyAddressHandler} type="text" value={companyAddress} id="companyName" />
+                    <div className="a flex flex-col text-left mb-[2rem] ">
+                        <label className='my-[3px] text-[18px]'>Company's Address</label>
+                        <input className='px-3 py-[9px] border-[1.5px] border-gray-300 rounded-md' onChange={companyAddressHandler} type="text" value={companyAddress} id="companyName" />
                     </div>
-                    <div className="a grid grid-cols-2 gap-2 mb-2   ">
+                    <div className="a grid grid-cols-2 gap-2 mb-[2rem]   ">
                         <div className="b flex flex-col text-left ">
-                            <label className='my-[3px]'>City</label>
-                            <input className='px-3 py-[3px] border-[1.5px] border-gray-300 rounded-md' onChange={cityHandler} type="text" value={city} id="companyName" />
+                            <label className='my-[4px] text-[18px]'>City</label>
+                            <input className='px-3 py-[9px] border-[1.5px] border-gray-300 rounded-md' onChange={cityHandler} type="text" value={city} id="companyName" />
                         </div>
                         <div className="b  flex flex-col text-left">
-                            <label className='my-[3px]'>Country</label>
-                            <input className='px-3 py-[3px] border-[1.5px] border-gray-300 rounded-md' onChange={countryHandler} type="text" value={country} id="companyName" />
+                            <label className='my-[3px] text-[18px]'>Country</label>
+                            <input className='px-3 py-[9px] border-[1.5px] border-gray-300 rounded-md' onChange={countryHandler} type="text" value={country} id="companyName" />
                         </div>
                     </div>
                     <div className="a flex flex-col text-left">
-                        <label className='my-[3px]'>Date of Application</label>
-                        <input className='px-3 py-[3px] border-[1.5px] border-gray-300 rounded-md' onChange={dateHandler} type="text" value={date} id="companyName" />
+                        <label className='my-[4px] text-[18px]'>Date of Application</label>
+                        <input className='px-3 py-[9px] border-[1.5px] border-gray-300 rounded-md' onChange={dateHandler} type="text" value={date} id="companyName" />
                     </div>
+                    <button type='submit' disabled={show} className='px-5 w-[100%] py-4 mt-[3rem] mb-[100px] text-[18px] text-white bg-blue-700  font-semibold rounded-md'>Continue</button>
                 </div>
 
                 <div className="right mt-[-2rem] md:mt-0 ">
-                    <div className="a flex flex-col text-left mb-2 ">
-                        <label className='my-[3px]'>What Role Are You Applying For?</label>
-                        <input className='px-3 py-[3px] border-[1.5px] border-gray-300 rounded-md' type="text" onChange={roleHandler} value={role} id="companyName" />
+                    <div className="a flex flex-col text-left mb-[2rem] ">
+                        <label className='my-[4px] text-[18px]'>What Role Are You Applying For?</label>
+                        <input className='px-3 py-[9px] border-[1.5px] border-gray-300 rounded-md' type="text" onChange={roleHandler} value={role} id="companyName" />
                     </div>
-                    <div className="a flex flex-col text-left mb-2 ">
-                        <label className='my-[3px]'>Years of Experience</label>
-                        <input className='px-3 py-[3px] border-[1.5px] border-gray-300 rounded-md' type="text" onChange={yearsHandler} value={years} id="companyName" />
+                    <div className="a flex flex-col text-left mb-[2rem] ">
+                        <label className='my-[4px] text-[18px]'>Years of Experience</label>
+                        <input className='px-3 py-[9px] border-[1.5px] border-gray-300 rounded-md' type="text" onChange={yearsHandler} value={years} id="companyName" />
                     </div>
-                    <div className="a flex flex-col text-left mb-2 ">
-                            <label className='my-[3px]'>Recipient's Name</label>
-                            <input className='px-3 py-[3px] border-[1.5px] border-gray-300 rounded-md' type="text" onChange={nameHandler} value={name} id="companyName" />
+                    <div className="a flex flex-col text-left mb-[2rem] ">
+                            <label className='my-[4px] text-[18px]'>Recipient's Name</label>
+                            <input className='px-3 py-[9px] border-[1.5px] border-gray-300 rounded-md' type="text" onChange={nameHandler} value={name} id="companyName" />
                     </div>
                     <div className="a flex flex-col text-left">
-                        <label className='my-[3px]'>Recipient's Department(Optional)</label>
-                        <input className='px-3 py-[3px] border-[1.5px] border-gray-300 rounded-md' type="text" onChange={departmentHandler} value={department} id="companyName" />
+                        <label className='my-[4px] text-[18px]'>Recipient's Department(Optional)</label>
+                        <input className='px-3 py-[9px] border-[1.5px] border-gray-300 rounded-md' type="text" onChange={departmentHandler} value={department} id="companyName" />
                     </div>
-                    <button type='submit' disabled={show} className='px-5 w-[100%] py-2 mt-[25px] mb-[100px] text-[14px] text-white bg-blue-700  font-semibold rounded-md'>Continue</button>
+                    
                 </div>
 
             </form>
