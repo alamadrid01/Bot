@@ -1,7 +1,10 @@
-import React, {useState} from 'react'
+import React, {useState,useContext} from 'react'
 import {useNavigate} from 'react-router-dom'
 import back from './asesets/arrow.png';
+import { UserContext } from "../../App";
+
 function InputData() {
+    const { file, setFile, fileName, setFileName } = useContext(UserContext);
 
     const [companyName, setCompanyName] = useState('')
     const [companyAddress, setCompanyNameAddress] = useState('')
@@ -55,8 +58,10 @@ function InputData() {
     const submit = (e) =>{
         e.preventDefault()
 
-            if(companyName.length==0||companyAddress.length==0){
+            if(companyName.length==0||companyAddress.length==0||city.length||country.length||date.length||role.length||years.length||name.length){
                 setError(true)
+            }else{
+                // setError(!error)
             }
         
         
@@ -65,6 +70,7 @@ function InputData() {
    
   return (
     <div className='bg-red md:px-[204px] md:py-[120px] font-manrope'>
+        <h1>{fileName}</h1>
         <main className=' md:px-[80px] px-[30px] rounded-lg h-sreen pt-12 bg-white ' >
             <button onClick={clickHandler} className='flex items-center  mt-[55px] gap-3 font-semibold'>
                 <img src={back} className='h-[30] md:h-[36px] w-[30px] md:w-[36px]' alt="" />
