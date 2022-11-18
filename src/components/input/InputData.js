@@ -61,7 +61,7 @@ function InputData() {
 
    
   return (
-    <div className='bg-red px-10 md:px-[204px] md:py-[120px] py-10'>
+    <div className='bg-red px-10 md:px-[204px] md:py-[120px] font-manrope py-10'>
         <main className=' md:px-[80px] px-[80px] rounded-lg h-sreen pt-12 bg-white ' >
             <button onClick={clickHandler} className='flex  mt-[55px] gap-3 font-semibold'>
                 <img src={back} className='h-[36px] w-[36px]' alt="" />
@@ -69,7 +69,7 @@ function InputData() {
             </button>
             <h1 className="title mt-[80px] text-left font-semibold text-[40px]">Tell Us A Little About the Job</h1>
             <p className="subtitle text-left text-gray-800 mt-2 text-[20px]">This information would help us to customize your cover letter and tailor it to your specific application</p>
-            <form action="post" onSubmit={submit} className="form grid w-[100%]  md:grid-cols-2 md:gap-20 gap-12 my-[80px] grid-cols-1 ">
+            <form action="post" onSubmit={submit} className="form font-manrope grid w-[100%]  md:grid-cols-2 md:gap-20 gap-12 my-[80px] grid-cols-1 ">
                 <div className="left">
                     <div className="a flex font-manrope flex-col text-left mb-[2rem] ">
                         <label className='my-[4px] text-[18px]'>Company's Name</label>
