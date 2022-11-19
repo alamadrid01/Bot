@@ -25,7 +25,7 @@ function SectionTwo() {
   };
 
   return (
-    <div className="px-1 z-20  relative flex flex-col items-center md:flex-rol bg-gray-100  py-[50px]">
+    <div id="upload_section" className="px-1 z-20  relative flex flex-col items-center md:flex-rol bg-gray-100  py-[50px]">
       <main className="flex flex-col items-center  md:w-[98%] w-[90%]  md:flex-row md:mt-[60px]  ">
         <div className="left text-left text-gray-800  md:px-[14vh] md:w-[49%] w-[100%] mb-[20px] md:mb-09  flex flex-col justify-center items-center ">
           <h2 className="md:text-4xl text-[24px] font-bold leading-[3rem] mb-[11px]   ">
@@ -37,7 +37,7 @@ function SectionTwo() {
           </p>
         </div>
         <div
-          className={`right md:w-[540px] h-[443px] w-[100%] border-2 flex flex-col  justify-center items-center md:ml-[3.5em] ${
+          className={`right md:w-[540px] h-[443px] w-[100%] border-2 flex flex-col px-[8px] justify-center items-center md:ml-[3.5em] ${
             show ? "border-[#e42424]" : "border-[gray]"
           } border-dashed rounded-lg `}
         >
