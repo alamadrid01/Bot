@@ -55,7 +55,7 @@ function SectionTwo() {
                 type="file"
                 accept="application/pdf"
                 onChange={changeHandler}
-                className="upload_file absolute  left-0 bottom-0 w-[100%] h-[100%] "
+                className="upload_file absolute cursor-pointer left-0 bottom-0 w-[100%] h-[100%] "
                 id="upload_button"
               />
             )}
