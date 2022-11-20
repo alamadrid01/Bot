@@ -15,7 +15,7 @@ function SectionFive() {
         <button
           className="px-[32px] py-[12px] mt-[25px]  text-[14px] md:text-[16px] text-white bg-blue-700  font-semibold rounded-lg"
         >
-          Create Cover Letter{"#upload_section"}
+          <a className="w-[100%] h-[100%]" href="#upload_section"> Create Cover Letter</a>
         </button>
       </div>
     </div>
