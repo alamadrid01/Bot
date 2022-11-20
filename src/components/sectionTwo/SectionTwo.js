@@ -50,9 +50,10 @@ function SectionTwo() {
                 alt=""
               />
             )}
-            {fileSize > 0 ? null : (
+            {fileSize > 0 && fileSize <5000000 ? null : (
               <input
                 style={{ opacity: "0" }}
+                // style={{ background: "red" }}
                 type="file"
                 accept="application/pdf"
                 onChange={changeHandler}
