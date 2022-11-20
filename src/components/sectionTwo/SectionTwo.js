@@ -1,6 +1,6 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { UserContext } from "../../App";
+import { useGlobalContext } from "../../context/context";
 import Uploaded from "../uploaded/Uploaded";
 import first from "./assets/first.svg";
 
@@ -8,12 +8,10 @@ function SectionTwo() {
   const [fileSize, setFileSize] = useState("");
   const [show, setShow] = useState(false);
 
-  // const [fileLength, setFileLength] = useState('')
-  const { file, setFile, fileName, setFileName } = useContext(UserContext);
+  const { file, setFile,  } = useGlobalContext
 
   const changeHandler = (e) => {
     setFile(e.target.files);
-    setFileName(e.target.files[0].name);
     setFileSize(e.target.files[0].size);
   };
   const fileValidation = () => {
@@ -25,10 +23,13 @@ function SectionTwo() {
   };
 
   return (
-    <div id="upload_section" className="px-1 z-20  relative flex flex-col items-center md:flex-rol bg-gray-100  py-[50px]">
+    <div
+      id="upload_section"
+      className="px-1 z-20  relative flex flex-col items-center md:flex-rol bg-gray-100  py-[50px]"
+    >
       <main className="flex flex-col items-center  md:w-[98%] w-[90%]  md:flex-row md:mt-[60px]  ">
         <div className="left text-left text-gray-800  md:px-[14vh] md:w-[49%] w-[100%] mb-[20px] md:mb-09  flex flex-col justify-center items-center ">
-          <h2 className="md:text-4xl text-[24px] font-bold leading-[3rem] mb-[11px]   ">
+          <h2 className="md:text-4xl text-[24px] font-bold leading-[3remb] mb-[11px]   ">
             Upload your CV/Resume to make a Cover Letter
           </h2>
           <p className="text-gray md:text-[22px] mt-2 text-[20px] text-[#666060] ">
@@ -50,6 +51,7 @@ function SectionTwo() {
               />
             )}
             {fileSize > 0 ? null : (
+              <form method="post" name="myFile" action="/upload" encType="multipart/form-data">
               <input
                 style={{ opacity: "0" }}
                 type="file"
@@ -57,8 +59,11 @@ function SectionTwo() {
                 onChange={changeHandler}
                 className="upload_file absolute cursor-pointer left-0 bottom-0 w-[100%] h-[100%] "
                 id="upload_button"
+                
               />
+              </form>
             )}
+
 
             {fileSize > 0 ? (
               <Uploaded />
