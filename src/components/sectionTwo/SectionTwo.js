@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
+import axios from 'axios'
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../App";
 import Uploaded from "../uploaded/Uploaded";
@@ -60,7 +61,7 @@ function SectionTwo() {
               />
             )}
 
-            {fileSize > 0 ? (
+            {fileSize >0 && fileSize <5000000 ? (
               <Uploaded />
             ) : (
               <label for="upload_file" className="">

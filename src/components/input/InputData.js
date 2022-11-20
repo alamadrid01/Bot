@@ -1,4 +1,5 @@
 import React, {useState,useContext} from 'react'
+import axios from 'axios'
 import {useNavigate} from 'react-router-dom'
 import back from './asesets/arrow.png';
 import { UserContext } from "../../App";
@@ -60,7 +61,8 @@ function InputData() {
 
             if(companyName.length==0||companyAddress.length==0||city.length||country.length||date.length||role.length||years.length||name.length){
                 setError(true)
-            }else{
+            }
+            if(companyAddress&&companyName&&city&&country&&date&&role&&years&&name){
                 alert('Dude calm down, i have not linked the API') 
             }
         
@@ -83,14 +85,14 @@ function InputData() {
                         <label className='my-[4px] text-[18px]'>Company's Name</label>
                         <input  className='px-3 py-[9px] border-[1.5px] border-gray-300 rounded-md' onChange={companyHandler} autoFocus type="text" value={companyName} id="companyName" />
                         {
-                            error&&companyName<=0 ? <p className='text-rose-500 mt-2 ml-2 text-[14px]'>This is an error alert. check it out !</p>  : ''
+                            error&&companyName<=0 ? <p className='text-rose-500 mt-2 ml-2 text-[14px]'>Company's Name is required</p>  : ''
                         }
                     </div>
                     <div className="a flex flex-col text-left mb-[2rem] ">
                         <label className='my-[3px] text-[18px]'>Company's Address</label>
                         <input className='px-3 py-[9px] border-[1.5px] border-gray-300 rounded-md' onChange={companyAddressHandler} type="text" value={companyAddress} id="companyName" />
                         {
-                            error&&companyAddress<=0 ? <p className='text-rose-500 mt-2 ml-2 text-[14px]'>This is an error alert. check it out !</p>  : ''
+                            error&&companyAddress<=0 ? <p className='text-rose-500 mt-2 ml-2 text-[14px]'>Company's Address is required</p>  : ''
                         }
                     </div>
                     <div className="a grid grid-cols-2 gap-2 mb-[2rem]   ">
@@ -98,14 +100,14 @@ function InputData() {
                             <label className='my-[4px] text-[18px]'>City</label>
                             <input className='px-3 py-[9px] border-[1.5px] border-gray-300 rounded-md' onChange={cityHandler} type="text" value={city} id="companyName" />
                             {
-                            error&&city<=0 ? <p className='text-rose-500 mt-2 ml-2 text-[14px]'>This is an error alert. check it out !</p>  : ''
+                            error&&city<=0 ? <p className='text-rose-500 mt-2 ml-2 text-[14px]'>City is required</p>  : ''
                         }
                         </div>
                         <div className="b  flex flex-col text-left">
                             <label className='my-[3px] text-[18px]'>Country</label>
                             <input className='px-3 py-[9px] border-[1.5px] border-gray-300 rounded-md' onChange={countryHandler} type="text" value={country} id="companyName" />
                             {
-                            error&&country<=0 ? <p className='text-rose-500 mt-2 ml-2 text-[14px]'>This is an error alert. check it out !</p>  : ''
+                            error&&country<=0 ? <p className='text-rose-500 mt-2 ml-2 text-[14px]'>Country is required</p>  : ''
                         }
                         </div>
                     </div>
@@ -113,7 +115,7 @@ function InputData() {
                         <label className='my-[4px] text-[18px]'>Date of Application</label>
                         <input className='px-3 py-[9px]  border-[1.5px] border-gray-300 rounded-md' onChange={dateHandler} type="text" value={date} id="companyName" />
                         {
-                            error&&date<=0 ? <p className='text-rose-500 mt-2 ml-2 text-[14px]'>This is an error alert. check it out !</p>  : ''
+                            error&&date<=0 ? <p className='text-rose-500 mt-2 ml-2 text-[14px]'>Date is required</p>  : ''
                         }
                     </div>
                 </div>
@@ -123,21 +125,21 @@ function InputData() {
                         <label className='my-[4px] text-[18px]'>What Role Are You Applying For?</label>
                         <input className='px-3 py-[9px] border-[1.5px] border-gray-300 rounded-md' type="text" onChange={roleHandler} value={role} id="companyName" />
                         {
-                            error&&role<=0 ? <p className='text-rose-500 mt-2 ml-2 text-[14px]'>This is an error alert. check it out !</p>  : ''
+                            error&&role<=0 ? <p className='text-rose-500 mt-2 ml-2 text-[14px]'>Role is required</p>  : ''
                         }
                     </div>
                     <div className="a flex flex-col text-left mb-[2rem] ">
                         <label className='my-[4px] text-[18px]'>Years of Experience</label>
                         <input className='px-3 py-[9px] border-[1.5px] border-gray-300 rounded-md' type="text" onChange={yearsHandler} value={years} id="companyName" />
                         {
-                            error&&years<=0 ? <p className='text-rose-500 mt-2 ml-2 text-[14px]'>This is an error alert. check it out !</p>  : ''
+                            error&&years<=0 ? <p className='text-rose-500 mt-2 ml-2 text-[14px]'>Years of Experience is required</p>  : ''
                         }
                     </div>
                     <div className="a flex flex-col text-left mb-[2rem] ">
                             <label className='my-[4px] text-[18px]'>Recipient's Name</label>
                             <input className='px-3 py-[9px] border-[1.5px] border-gray-300 rounded-md' type="text" onChange={nameHandler} value={name} id="companyName" />
                             {
-                            error&&name<=0 ? <p className='text-rose-500 mt-2 ml-2 text-[14px]'>This is an error alert. check it out !</p>  : ''
+                            error&&name<=0 ? <p className='text-rose-500 mt-2 ml-2 text-[14px]'>Recipient name is required</p>  : ''
                         }
                     </div>
                     <div className="a flex flex-col text-left">
