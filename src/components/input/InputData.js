@@ -63,6 +63,7 @@ function InputData() {
                 setError(true)
             }
             if(companyAddress&&companyName&&city&&country&&date&&role&&years&&name){
+                
                 alert('Dude calm down, i have not linked the API') 
             }
         

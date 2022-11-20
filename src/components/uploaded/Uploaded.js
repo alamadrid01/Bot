@@ -36,7 +36,7 @@ function Uploaded() {
                 type="file"
                 accept="application/pdf"
                 onChange={changeHandler}
-                className="upload_file absolute cursor-pointer right-0 bottom-[22%] w-[45%] h-[11%] "
+                className="upload_file absolute cursor-pointer right-[25%] md:right-0 bottom-[18%] md:bottom-[22%] w-[45%] h-[11%] "
                 id="upload_button"
               />
             <h2 className='text-blue-700 mb-4 mt-5 font-semibold text-[24px] '>Your CV has Been Uploaded</h2>
