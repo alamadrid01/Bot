@@ -8,9 +8,6 @@ function SectionOne() {
     useEffect(() => {
       axios.get('https://jsonplaceholder.typicode.com/posts')
       .then(res =>{
-        console.log(res.data)
-        
-
         setMessage([...message].concat(res.data))
       })
       .catch(error =>{
